@@ -7,7 +7,7 @@ Realização de um desafio semanal da Rocketseat para desenvolver uma página de
 #boraCodar - Desafio 8
 
 ## 🖥️ Layout
-https://bloco-carnaval.vercel.app/
+https://dashboard-sand-beta.vercel.app/
 
 
 ## 🚀 Tecnologias utilizadas
