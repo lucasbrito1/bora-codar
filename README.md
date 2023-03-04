@@ -1,7 +1,7 @@
 <h1 align="center">#boraCodar</h1>
 
 <p align="center">
-    Projetos #boraCodar da Rocketseat <br>
+    Projetos/Desafios #boraCodar da Rocketseat que são propostos semanalmente <br>
     <a href="https://boracodar.dev">Acesse o desafio desta semana clicando aqui</a><br>
     <br><table align="center">
     <thead>
