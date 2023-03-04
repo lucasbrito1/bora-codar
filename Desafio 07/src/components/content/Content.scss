@@ -1,0 +1,98 @@
+.content-container {
+  width: 1216px;
+  margin: 100px auto;
+
+  .title {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .title-text {
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    .button-select {
+      border: 1px solid #eaeaea;
+      width: 190px;
+      height: 48px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      .button-lista {
+        button {
+          background-color: #6246ea;
+          color: white;
+          padding: 4px 24px;
+          border-radius: 5px;
+          border: none;
+          width: 86px;
+          height: 32px;
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+
+      .button-mapa {
+        button {
+          color: #6246ea;
+          background: none;
+          border: none;
+          font-weight: 700;
+          width: 86px;
+          height: 32px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .grid-cards {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+    .card {
+      border: 1px solid #eaeaea;
+      width: 384px;
+      height: 323px;
+      border-radius: 10px;
+
+      .card-content {
+        padding: 16px;
+
+        .card-title {
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        .card-desc {
+          padding: 16px 0;
+       }
+      }
+
+      .card-city {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 0;
+
+        .card-city-icon {
+          width: 24px;
+          height: 24px;
+          color: #e45858;
+        }
+      }
+
+      img {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.main-hero{
+  background-color: #f8f8ff;
+  height: 532px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .ilustra01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 407px;
+    height: 345px;
+  }
+
+  .ilustra02 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 414px;
+    height: 338px;
+  }
+
+  .hero{
+    width: 647px;
+    z-index: 1;
+
+    .find {
+      text-align: center;
+      color: #e45858;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .encontre {
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .melhores {
+      color: #6246ea;
+    }
+
+    .main-hero-search {
+      display: flex;
+      justify-content: center;
+
+      .hero-search {
+        background-color: white;
+        width: 993px;
+        height: 128px;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 0 40px;
+
+        .input-container {
+          position: relative;
+
+          .search-name {
+            background-color: #f4f4ff;
+            width: 348px;
+            height: 48px;
+            padding-left: 50px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            color: gray;
+          }
+
+          .icon-search {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            color: #e45858;
+          }
+        }
+
+        .select-container {
+          position: relative;
+
+          .select-city {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("../../assets/arrow.svg");
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding-right: 20px;
+            background-color: #f4f4ff;
+            padding: 12px 45px 12px 45px;
+            background-position-x: 95%;
+            width: 348px;
+            height: 48px;
+            border-radius: 5px;
+            border: none;
+            color: gray;
+            position: relative;
+            font-size: 16px;
+            cursor: pointer;
+          }
+
+          .icon-location {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            color: #e45858;
+          }
+        }
+
+        .button-search {
+          width: 169px;
+          height: 48px;
+          background-color: #6246ea;
+          border: none;
+          border-radius: 5px;
+          color: white;
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
