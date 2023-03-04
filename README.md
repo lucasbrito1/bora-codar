@@ -2,7 +2,6 @@
 
 <p align="center">
     Realizado alguns projetos/desafios #boraCodar da Rocketseat que são propostos semanalmente <br>
-    
     <br><table align="center">
     <thead>
         <tr>
