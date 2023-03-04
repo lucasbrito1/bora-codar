@@ -3,7 +3,7 @@
 <p align="center">
     Projetos #boraCodar da Rocketseat <br>
     <a href="https://boracodar.dev">Acesse o desafio desta semana clicando aqui</a><br>
-    <br><table>
+    <br><table align="center">
     <thead>
         <tr>
             <th align="center">
