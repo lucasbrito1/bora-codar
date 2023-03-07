@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #F8FAFC;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
