@@ -1,39 +1,52 @@
-import { ChangeEvent, useEffect, useState } from 'react';
-import arrow from '../assets/arrow.svg';
+import { ChangeEvent, useEffect, useState } from "react";
+import arrow from "../assets/arrow.svg";
 
 const Input = () => {
-
-  const apiKey = import.meta.env.VITE_API_KEY
-  const apiUrl = import.meta.env.VITE_API
+  const apiUrl = import.meta.env.VITE_API;
 
   const [coins, setCoins] = useState([]);
-  const [selectedCoin, setSelectedCoin] = useState<string>('');
+  const [selectedCoin1, setSelectedCoin1] = useState<string>("USD");
+  const [selectedCoin2, setSelectedCoin2] = useState<string>("BRL");
 
   const getCoin = async (url: any) => {
     const res = await fetch(url);
     const data = await res.json();
-  }
+    setCoins(data);
+  };
 
-  const handleCoin = (e: ChangeEvent<HTMLSelectElement>) => {
-    console.log(e);
+  const handleCoin1 = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCoin1(e.target.value);
+  };
 
+  const handleCoin2 = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCoin1(e.target.value);
   };
 
   useEffect(() => {
-    const coinUrl = `${apiUrl}${apiKey}/latest/USD`;
+    const coinUrl = `${apiUrl}${selectedCoin1}-${selectedCoin2}`;
     getCoin(coinUrl);
-  }, []);
-  console.log(selectedCoin);
+    console.log(coinUrl);
+  }, [selectedCoin1, selectedCoin2]);
+  console.log(selectedCoin1, selectedCoin2);
 
   return (
     <div className="border-2 border-[#94A3B8] focus-within:border-[#7C3AED] rounded-lg w-[18.25rem] h-14 pl-4 flex justify-between items-center relative">
-      <input type="text" className="h-6 w-44 outline-none border-r border-[#94A3B8]" />
-      <div className='border-r border-[#94A3B8]  ' />
-      <select name="" id="" onChange={handleCoin} className="appearance-none w-[100px] p-3 h-[52px] rounded-r-lg outline-none focus:bg-[#EDE9FE]">
-        <option value='USD' >USD</option>
-        <option value={selectedCoin}>BRL</option>
+      <input
+        type="text"
+        className="h-6 w-44 outline-none border-r border-[#94A3B8]"
+      />
+      <div className="border-r border-[#94A3B8]" />
+      <select
+        name=""
+        id=""
+        value={selectedCoin}
+        onChange={handleCoin}
+        className="appearance-none w-[100px] p-3 h-[52px] rounded-r-lg outline-none focus:bg-[#EDE9FE]"
+      >
+        <option value="USD">USD</option>
+        <option value="BRL">BRL</option>
       </select>
-      <img src={arrow} alt="" className='absolute right-0 mr-6' />
+      <img src={arrow} alt="" className="absolute right-0 mr-6" />
     </div>
   );
 };
