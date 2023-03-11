@@ -5,7 +5,7 @@ import changeArrow from "../assets/changeArrow.svg";
 const Input = () => {
   const [coins, setCoins] = useState([]);
   const [selectedCoin1, setSelectedCoin1] = useState<string>("USD");
-  const [selectedCoin2, setSelectedCoin2] = useState<string>("");
+  const [selectedCoin2, setSelectedCoin2] = useState<string>("USD");
 
   const apiUrl = import.meta.env.VITE_API;
 
