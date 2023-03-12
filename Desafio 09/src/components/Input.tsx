@@ -3,23 +3,21 @@ import arrow from "../assets/arrow.svg";
 import changeArrow from "../assets/changeArrow.svg";
 
 const Input = () => {
-  const [coins, setCoins] = useState([]);
   const [selectedCoin1, setSelectedCoin1] = useState<string>("USD");
   const [selectedCoin2, setSelectedCoin2] = useState<string>("USD");
+  const [coins, setCoins] = useState(0);
 
   const apiUrl = import.meta.env.VITE_API;
 
-  const getCoin = async (url: any) => {
-    const res = await fetch(url);
+  const getCoin = async (apiUrl: any) => {
+    const res = await fetch(apiUrl);
     const data = await res.json();
     setCoins(data);
-    console.log(data);
   };
 
   useEffect(() => {
     const coinUrl = `${apiUrl}${selectedCoin1}`;
     getCoin(coinUrl);
-    console.log(coinUrl);
   }, [selectedCoin1, selectedCoin2]);
 
   const handleCoin1 = (e: ChangeEvent<HTMLSelectElement>) => {
